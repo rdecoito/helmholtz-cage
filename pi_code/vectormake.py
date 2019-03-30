@@ -3,8 +3,12 @@ from datetime import datetime
 
 
 class HelmholtzCage:
-	def __init__(self, magfield):
+	def __init__(self, magfield, L, d):
 		self.magfield = magfield
+		# set length of side of coil
+		self.L = L
+		# set distance between coils 
+		self.d = d
 		self.currentX = []
 		self.currentY = []
 		self.currentZ = []
@@ -53,4 +57,3 @@ class MagField:
 				self.magY.append(float(prevrow[2]))
 				self.magZ.append(float(prevrow[3]))
 				prevrow = row
-
